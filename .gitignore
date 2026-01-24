@@ -37,9 +37,6 @@ coverage/
 # Three.js / react-three-fiber caches
 .r3f/
 
-# Tailwind and PostCSS cache files
-postcss.config.js
-
 # TypeScript Build Files (if applicable)
 *.tsbuildinfo
 
