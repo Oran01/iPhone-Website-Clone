@@ -25,7 +25,8 @@ const HowItWork = () => {
     gsap.from("#chip", {
       scrollTrigger: {
         trigger: "#chip",
-        start: "20% bottom",
+        start: "top 80%",
+        toggleActions: "play none none none",
       },
       opacity: 0,
       scale: 2,
@@ -34,12 +35,18 @@ const HowItWork = () => {
     });
 
     // Fade-in effect for text elements
-    animateWithGsap(".g_fadeIn", {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: "power2.inOut",
-    });
+    animateWithGsap(
+      ".g_fadeIn",
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.inOut",
+      },
+      {
+        toggleActions: "play none none none",
+      }
+    );
 
     window.addEventListener("load", () => {
       ScrollTrigger.refresh();
