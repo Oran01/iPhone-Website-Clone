@@ -26,7 +26,7 @@ const HowItWork = () => {
       scrollTrigger: {
         trigger: "#chip",
         start: "top 80%",
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
       },
       opacity: 0,
       scale: 2,
@@ -44,7 +44,7 @@ const HowItWork = () => {
         ease: "power2.inOut",
       },
       {
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
       }
     );
 
