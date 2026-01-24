@@ -21,6 +21,7 @@ const HowItWork = () => {
   // GSAP animations triggered on component mount
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.refresh();
     // Animate the chip image as it comes into view
     gsap.from("#chip", {
       scrollTrigger: {
