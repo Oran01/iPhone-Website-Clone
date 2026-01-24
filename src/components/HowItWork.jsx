@@ -5,8 +5,6 @@ import gsap from "gsap";
 import { animateWithGsap } from "../utils/animations";
 import { ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger);
-
 /**
  * HowItWork Component
  *
@@ -22,6 +20,7 @@ const HowItWork = () => {
 
   // GSAP animations triggered on component mount
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     // Animate the chip image as it comes into view
     gsap.from("#chip", {
       scrollTrigger: {
