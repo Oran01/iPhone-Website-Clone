@@ -21,8 +21,7 @@ const HowItWork = () => {
   // GSAP animations triggered on component mount
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.refresh();
-    // Animate the chip image as it comes into view
+
     gsap.from("#chip", {
       scrollTrigger: {
         trigger: "#chip",
@@ -34,13 +33,17 @@ const HowItWork = () => {
       ease: "power2.inOut",
     });
 
-    // Fade-in effect for text elements
     animateWithGsap(".g_fadeIn", {
       opacity: 1,
       y: 0,
       duration: 1,
       ease: "power2.inOut",
     });
+
+    // ✅ Fix for Vercel: wait for layout to settle before refreshing triggers
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 300);
   }, []);
 
   return (
