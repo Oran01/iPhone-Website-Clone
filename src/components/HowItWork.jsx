@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { chipImg, frameImg, frameVideo } from "../utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { animateWithGsap } from "../utils/animations";
+gsap.registerPlugin(ScrollTrigger);
 
 /**
  * HowItWork Component
@@ -37,6 +39,10 @@ const HowItWork = () => {
       y: 0,
       duration: 1,
       ease: "power2.inOut",
+    });
+
+    window.addEventListener("load", () => {
+      ScrollTrigger.refresh();
     });
   }, []);
 
