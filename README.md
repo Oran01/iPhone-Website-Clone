@@ -37,6 +37,12 @@ Inspired by [JavaScript Mastery](https://www.youtube.com/@javascriptmastery), th
 
 ---
 
+## 🌐 Live Demo
+
+[![Live Demo](https://img.shields.io/badge/Visit_Live_Demo-0A66C2?style=for-the-badge&logo=vercel&logoColor=white)](https://i-phone-website-clone-1obw.vercel.app/)
+
+---
+
 ### 🔍 Highlights
 
 - ✅ Responsive design
