@@ -2,9 +2,7 @@ import React, { useRef } from "react";
 import { chipImg, frameImg, frameVideo } from "../utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { animateWithGsap } from "../utils/animations";
-gsap.registerPlugin(ScrollTrigger);
 
 /**
  * HowItWork Component
@@ -25,8 +23,7 @@ const HowItWork = () => {
     gsap.from("#chip", {
       scrollTrigger: {
         trigger: "#chip",
-        start: "top 80%",
-        toggleActions: "play reverse play reverse",
+        start: "20% bottom",
       },
       opacity: 0,
       scale: 2,
@@ -35,21 +32,11 @@ const HowItWork = () => {
     });
 
     // Fade-in effect for text elements
-    animateWithGsap(
-      ".g_fadeIn",
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.inOut",
-      },
-      {
-        toggleActions: "play reverse play reverse",
-      }
-    );
-
-    window.addEventListener("load", () => {
-      ScrollTrigger.refresh();
+    animateWithGsap(".g_fadeIn", {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power2.inOut",
     });
   }, []);
 
